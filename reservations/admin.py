@@ -12,7 +12,7 @@ class ReservationAdmin(admin.ModelAdmin):
 
     list_display = (
         "room",
-        "status"
+        "status",
         "check_in",
         "check_out",
         "guest",
