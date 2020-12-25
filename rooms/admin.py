@@ -24,6 +24,8 @@ class PhotoInline(admin.TabularInline):
 class RoomAdmin(admin.ModelAdmin):
 
     """ Room Admin Definition """
+
+    inlines = (PhotoInline,)
     
     fieldsets = (
         (
