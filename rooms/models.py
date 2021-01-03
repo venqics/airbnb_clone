@@ -1,8 +1,9 @@
+from django.utils import timezone
 from django.db import models
+from django.urls import reverse
 from core import models as core_models
 from django_countries.fields import CountryField
-from users import models as user_models
-
+from cal import Calendar
 # Create your models here.
 
 class AbstractItem(core_models.TimeStampedModel):
@@ -101,3 +102,26 @@ class Room(core_models.TimeStampedModel):
                 all_ratings += review.rating_average()
             return round(all_ratings / len(all_reviews), 2)
         return 0
+
+    def first_photo(self):
+        try:
+            photo, = self.photos.all()[:1]
+            return photo.file.url
+        except ValueError:
+            return None
+
+    
+    def get_next_three_photos(self):
+        photos = self.photos.all()[1:4]
+        return photos
+
+    def get_calendars(self):
+        now = timezone.now()
+        this_year = now.year
+        this_month = now.month
+        next_month = this_month + 1
+        if this_month == 12:
+            next_month = 1
+        this_month_cal = Calendar(this_year, this_month)
+        next_month_cal = Calendar(this_year, next_month)
+        return [this_month_cal, next_month_cal]
