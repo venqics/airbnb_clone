@@ -28,9 +28,6 @@ class Conversation(core_models.TimeStampedModel):
     count_participants.short_description = "Number of Participants"
 
 
-    def __str__(self):
-        return str(self.created)
-
 
 class Message(core_models.TimeStampedModel):
 
