@@ -15,6 +15,7 @@ requests = "*"
 python-gettext = "*"
 django-smtp-ssl = "*"
 awsebcli = "*"
+psycopg2 = "*"
 
 [dev-packages]
 black = "*"
