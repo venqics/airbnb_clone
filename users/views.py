@@ -145,6 +145,8 @@ def github_callback(request):
         messages.error(request, e)
         return redirect(reverse("users:login"))
 
+
+
 def kakao_login(request):
     app_key = os.environ.get("K_KEY")
     redirect_uri = f"http://127.0.0.1:8000/users/login/kakao/callback"
