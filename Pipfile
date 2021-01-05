@@ -14,9 +14,11 @@ django-dotenv = "*"
 requests = "*"
 python-gettext = "*"
 django-smtp-ssl = "*"
+awsebcli = "*"
 
 [dev-packages]
 black = "*"
+awsebcli = "*"
 
 [requires]
 python_version = "3.9"
