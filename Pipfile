@@ -16,6 +16,7 @@ python-gettext = "*"
 django-smtp-ssl = "*"
 awsebcli = "*"
 psycopg2 = "*"
+sentry-sdk = "==0.19.5"
 
 [dev-packages]
 black = "*"
