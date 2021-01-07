@@ -17,6 +17,8 @@ django-smtp-ssl = "*"
 awsebcli = "*"
 psycopg2 = "*"
 sentry-sdk = "==0.19.5"
+django-storages = "*"
+boto3 = "*"
 
 [dev-packages]
 black = "*"
