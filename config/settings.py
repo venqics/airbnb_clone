@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET","Jln!sWitota&rEVicIj?yAchlNewU0A")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get("DEBUG"))
 
-ALLOWED_HOSTS = [".elasticbeanstalk.com", ""]
+ALLOWED_HOSTS = [""]
 
 
 # Application definition
@@ -194,9 +194,6 @@ AWS_BUCKET_ACL = "public-read"
 #Sentry
 
 if not DEBUG:
-
-    
-    
 
     sentry_sdk.init(
         dsn=os.environ.get("SENTRY_URL"),
