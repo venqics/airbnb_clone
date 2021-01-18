@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import sentry_sdk
+
 from django.conf import settings
-from sentry_sdk.integrations.django import DjangoIntegration
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -107,10 +107,10 @@ else:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
-            "HOST": os.environ.get("RDS_HOST"),
-            "NAME": os.environ.get("RDS_NAME"),
-            "USER": os.environ.get("RDS_USER"),
-            "PASSWORD": os.environ.get("RDS_PASSWORD"),
+            "HOST": "localhost",
+            "NAME": "airbnbdb",
+            "USER": "airbnbuser",
+            "PASSWORD": "test12345",
             "PORT": "5432",
         }
     }
@@ -192,7 +192,7 @@ AWS_AUTO_CREATE_BUCKET = True
 AWS_BUCKET_ACL = "public-read"
 """
 #Sentry
-
+"""
 if not DEBUG:
 
     sentry_sdk.init(
@@ -204,3 +204,4 @@ if not DEBUG:
     # django.contrib.auth) you may enable sending PII data.
         send_default_pii=True
     )
+    """
