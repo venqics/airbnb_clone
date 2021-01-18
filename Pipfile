@@ -16,7 +16,8 @@ python-gettext = "*"
 django-smtp-ssl = "*"
 awsebcli = "*"
 psycopg2 = "*"
-
+pipenv-to-requirements = "*"
+pathspec = "*"
 
 [dev-packages]
 black = "*"
