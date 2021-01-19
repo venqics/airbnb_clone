@@ -4,7 +4,7 @@
     "python.linting.flake8Args": [
         "--max-line-length = 100"
     ],
-    "python.pythonPath": "C:\\Users\\venky\\.virtualenvs\\airbnb_clone-tbj2Ksnv\\Scripts\\python.exe",
+    "python.pythonPath": "C:\\Users\\venky\\.conda\\envs\\venat\\python.exe",
     "css.validate": false,
     "less.validate": false,
     "scss.validate": false,
