@@ -4,27 +4,18 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==2.2.5"
-flake8 = "*"
-black = "*"
-django-countries = "*"
+django = "*"
 pillow = "*"
 django-seed = "*"
-django-dotenv = "*"
+django-countries = "*"
 requests = "*"
-python-gettext = "*"
 django-smtp-ssl = "*"
-awsebcli = "*"
 psycopg2 = "*"
-pipenv-to-requirements = "*"
-pathspec = "*"
+psycopg2-binary = "*"
+awsebcli = "*"
+django-dotenv = "*"
 
 [dev-packages]
-black = "*"
-awsebcli = "*"
 
 [requires]
 python_version = "3.7"
-
-[pipenv]
-allow_prereleases = true
