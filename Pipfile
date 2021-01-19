@@ -13,6 +13,7 @@ django-smtp-ssl = "*"
 psycopg2-binary = "*"
 awsebcli = "*"
 django-dotenv = "*"
+pipenv-to-requirements = "*"
 
 [dev-packages]
 
