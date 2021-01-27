@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+"""
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
             "default": {
@@ -105,7 +105,8 @@ if 'RDS_DB_NAME' in os.environ:
                  }
 
 else:
-    DATABASES = {
+   """ 
+DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
                 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
